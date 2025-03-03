@@ -1,0 +1,398 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  text-align: center;
+}
+
+/* Header */
+.dashboard-header {
+  font-size: 2rem; /* Responsive font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+.dashboard-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.nav-button {
+  flex: 1;
+  background: #ff9800;
+  color: white;
+  padding: 12px;
+  font-size: 1rem; /* Responsive font size */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+.nav-button.active {
+  background: #28a745;
+}
+
+/* Content Sections */
+.content {
+  margin-top: 20px;
+}
+
+.purchase-section,
+.invoice-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Customer Section */
+.customer-section {
+  margin-bottom: 20px;
+}
+
+.new-customer-form {
+  margin-top: 15px;
+}
+
+/* Input Fields */
+.invoice-input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem; /* Responsive font size */
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.invoice-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.invoice-input:focus {
+  border-color: #ff9800;
+  outline: none;
+}
+
+/* Select Dropdown */
+.invoice-select {
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem; /* Responsive font size */
+  margin-bottom: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.invoice-select:hover {
+  border-color: #ff9800;
+}
+
+.invoice-select:focus {
+  border-color: #ff9800;
+  outline: none;
+}
+
+/* Add Button */
+.action-button {
+  background: #28a745;
+  color: white;
+  padding: 12px;
+  font-size: 1rem; /* Responsive font size */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Full width on small screens */
+}
+
+.action-button:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+/* List Items */
+.list {
+  margin-top: 20px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Buttons in Invoice Items */
+.mark-paid-button,
+.delete-button,
+.download-button {
+  padding: 8px 15px;
+  font-size: 0.875rem; /* Responsive font size */
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-left: 10px;
+}
+
+.mark-paid-button {
+  background: #28a745;
+  color: white;
+}
+
+.mark-paid-button:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+.download-button {
+  background: #007bff;
+  color: white;
+}
+
+.download-button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  color: #333;
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem; /* Responsive font size */
+  color: #333;
+}
+
+.modal input::placeholder {
+  color: #999;
+}
+
+.modal button {
+  padding: 10px 20px;
+  font-size: 1rem; /* Responsive font size */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modal .action-button {
+  background: #28a745;
+  color: white;
+}
+
+.modal .cancel-button {
+  background: #dc3545;
+  color: white;
+}
+
+.modal .action-button:hover {
+  background: #218838;
+}
+
+.modal .cancel-button:hover {
+  background: #c82333;
+}
+
+/* Customer List Styling */
+.customer-list {
+  margin-top: 20px;
+}
+
+.customer-list-item {
+  background: rgba(249, 249, 249, 0.9);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  color: #3270ad;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.customer-list-item:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Metrics Section */
+.metrics {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.metrics h3 {
+  margin-top: 0;
+  font-size: 1.25rem; /* Responsive font size */
+  color: #fff;
+}
+
+.metrics p {
+  margin: 10px 0;
+  font-size: 1rem; /* Responsive font size */
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-nav {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .nav-button {
+    width: 100%; /* Full width buttons on small screens */
+    margin-bottom: 10px; /* Space between stacked buttons */
+  }
+
+  .invoice-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .invoice-input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .invoice-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .invoice-item button {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .dashboard-header {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .modal {
+    width: 95%; /* Wider modal on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    font-size: 1.25rem; /* Even smaller font size for very small screens */
+  }
+
+  .nav-button {
+    padding: 10px; /* Smaller padding for mobile */
+    font-size: 0.875rem; /* Smaller font size for mobile */
+  }
+
+  .action-button {
+    padding: 10px; /* Smaller padding for mobile */
+    font-size: 0.875rem; /* Smaller font size for mobile */
+  }
+}
+
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #3270ad; /* Blue border */
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: rgb(75, 11, 126); /* Darker border on focus */
+  box-shadow: 0 0 8px rgba(75, 11, 126, 0.3);
+}
